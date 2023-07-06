@@ -1,85 +1,16 @@
-# colab-kaggle_MINST
+# colab-kaggle_MNIST
 
 ### Config:
 
-Colab: python3 gpu T4
+Colab: python3 gpu Tesla T4
 
-Kaggle: python3 gpu T4
+Kaggle: python3 gpu Tesla T4 * 2
 
 ------
 
 ### To see
 
-第二段代码是在Kaggle上训练MNIST数据集的代码示例。它与第一段代码非常相似，只有在数据集加载的部分稍有不同。Kaggle上的TensorFlow库的导入方式略有不同，因此使用`tf.keras.datasets.mnist.load_data()`来加载MNIST数据集。
+Two pieces of code train the MNIST dataset with a neural network model on Kaggle and Colab, respectively. The 'Run_on_Kaggle' code is very similar to the 'Run_on_Colab' code, only slightly different in the data set loading part. Kaggle TensorFlow library on a slightly different way of import, so using ` tf. Keras. Datasets. Mnist. Load_data ` () to load the mnist data set.
 
-尽量在控制各个变量的情况下，run三次，得到输出后进行对比
+Try to run three times with the epoch set to 5 each time while controlling each variable. At the end of each session, the maximum GPU memory usage is checked by self-defined functions, and then the training time of each session is compared.
 
----
-
-### OUTPUT
-
-### colab：
-
-#### 第一次
-
-Epoch 1/5 1875/1875 [==============================] - 10s 2ms/step - loss: 0.2517 - accuracy: 0.9287 Epoch 2/5 1875/1875 [==============================] - 5s 3ms/step - loss: 0.1084 - accuracy: 0.9679 Epoch 3/5 1875/1875 [==============================] - 5s 2ms/step - loss: 0.0747 - accuracy: 0.9774 Epoch 4/5 1875/1875 [==============================] - 5s 3ms/step - loss: 0.0556 - accuracy: 0.9831 Epoch 5/5 1875/1875 [==============================] - 5s 3ms/step - loss: 0.0436 - accuracy: 0.9867 训练时间： 29.597137689590454 秒
-
-#### 第二次：
-
-Epoch 1/5 1875/1875 [==============================] - 6s 3ms/step - loss: 0.2550 - accuracy: 0.9261 Epoch 2/5 1875/1875 [==============================] - 4s 2ms/step - loss: 0.1133 - accuracy: 0.9671 Epoch 3/5 1875/1875 [==============================] - 4s 2ms/step - loss: 0.0790 - accuracy: 0.9760 Epoch 4/5 1875/1875 [==============================] - 5s 3ms/step - loss: 0.0599 - accuracy: 0.9812 Epoch 5/5 1875/1875 [==============================] - 4s 2ms/step - loss: 0.0469 - accuracy: 0.9851 训练时间： 41.748295545578 秒
-
-#### 第三次：
-
-Epoch 1/5 1875/1875 [==============================] - 6s 3ms/step - loss: 0.2564 - accuracy: 0.9266 Epoch 2/5 1875/1875 [==============================] - 4s 2ms/step - loss: 0.1127 - accuracy: 0.9669 Epoch 3/5 1875/1875 [==============================] - 5s 3ms/step - loss: 0.0784 - accuracy: 0.9764 Epoch 4/5 1875/1875 [==============================] - 5s 3ms/step - loss: 0.0599 - accuracy: 0.9816 Epoch 5/5 1875/1875 [==============================] - 4s 2ms/step - loss: 0.0462 - accuracy: 0.9865 训练时间： 41.72576308250427 秒
-
-
-
-### Kaggle
-
-#### 第一次：
-
-```python
-Epoch 1/5
-1875/1875 [==============================] - 10s 3ms/step - loss: 0.2617 - accuracy: 0.9263
-Epoch 2/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.1136 - accuracy: 0.9662
-Epoch 3/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0766 - accuracy: 0.9769
-Epoch 4/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0572 - accuracy: 0.9823
-Epoch 5/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0439 - accuracy: 0.9866
-训练时间： 29.833121061325073 秒
-```
-
-#### 第二次：
-
-```python
-Epoch 1/5
-1875/1875 [==============================] - 6s 3ms/step - loss: 0.2579 - accuracy: 0.9257
-Epoch 2/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.1145 - accuracy: 0.9660
-Epoch 3/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0783 - accuracy: 0.9765
-Epoch 4/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0583 - accuracy: 0.9825
-Epoch 5/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0451 - accuracy: 0.9860
-训练时间： 25.858194589614868 秒
-```
-
-#### 第三次：
-
-```python
-Epoch 1/5
-1875/1875 [==============================] - 6s 3ms/step - loss: 0.2601 - accuracy: 0.9253
-Epoch 2/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.1129 - accuracy: 0.9664
-Epoch 3/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0775 - accuracy: 0.9771
-Epoch 4/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0579 - accuracy: 0.9826
-Epoch 5/5
-1875/1875 [==============================] - 5s 3ms/step - loss: 0.0442 - accuracy: 0.9866
-训练时间： 41.78754115104675 秒
-```
