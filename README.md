@@ -14,3 +14,18 @@ Two pieces of code train the MNIST dataset with a neural network model on Kaggle
 
 Try to run three times with the epoch set to 5 each time while controlling each variable. At the end of each session, the maximum GPU memory usage is checked by self-defined functions, and then the training time of each session is compared.
 
+### layer
+
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+flatten (Flatten)            (None, 784)               0
+_________________________________________________________________
+dense (Dense)                (None, 128)               100480
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                1290
+=================================================================
+Total params: 101,770
+Trainable params: 101,770
+Non-trainable params: 0
+_________________________________________________________________
